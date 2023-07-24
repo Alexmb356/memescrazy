@@ -51,7 +51,7 @@ body{
   position:absolute;
   max-width: 300px;
   max-height: 400px;
-  margin-right: 0px;
+  margin-left: 0px;
   
 }  
 
@@ -62,18 +62,20 @@ body{
 
 
 .textoArriba{
-    width: 90%;
-    margin: 5px 10px 10px 1px;
+    width: 85%;
+    margin-left: 20px;
+    margin-right: 10px;
     position:absolute;
     padding:10px 0px 10px 0px;
     
 }
 
 .textoAbajo{
-	width: 90%;
+	width: 80%;
     bottom: 1%;
     position:absolute;
-    margin: 10px 10px 10px 1px;
+    margin-left: 20px;
+    margin-right: 10px;
     padding:10px 0px 10px 0px;
 
 }
@@ -103,6 +105,11 @@ body{
 		grid-template-columns: repeat(2, 1fr);
 		
 	}
+  .container-img {
+    
+    margin-left: 20px;
+    
+  }  
 
 
 }
