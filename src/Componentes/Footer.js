@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="d-flex justify-content-center align-items-center mt-4">
             <br/>
               <a href="/">
-                  <img alt="Icono memecrazy" src="../memecrazylogo-192x192.png" width={100} className="svg-icon items-center" />
+                  <img alt="Icono memecrazy" src="../crazymeme-192x192.png" width={100} className="svg-icon items-center" />
                   
               </a>
              
