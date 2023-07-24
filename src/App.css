@@ -107,7 +107,7 @@ body{
 	}
   .container-img {
     
-    margin-left: 20px;
+    margin-left: 20%;
     
   }  
 
@@ -126,7 +126,7 @@ body{
   @media (min-width: 1150px) and (max-width: 1348px){
 	.card-list-Meme {
 		
-		grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: repeat(6, 1fr);
 		
 	}
 
