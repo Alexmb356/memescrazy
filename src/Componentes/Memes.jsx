@@ -84,12 +84,12 @@ function cambiarColorTextoInferior(e) {
   return (
    <>
    <div className='container'>
-    <h1 className='mt-5 mb-3 text-light text-center'>Edita tu propio meme</h1>
+    <h1 className='mt-1 mb-3 text-light text-center'>Edita tu propio meme</h1>
 
     <div className='Container'>
       <div className='container-editor text-center row my-2'>
-        <div className='col-md-12  my-2'> <h2 className='mt-2 mb-3 text-center text-light'>Escribe tu frase</h2></div>
-        <div className='col-md-6 my-5'>
+        <div className='col-md-12  my-2'> <h2 className='mt-2 mb-2 text-center text-light'>Escribe tu frase</h2></div>
+        <div className='col-md-6 my-4'>
           
           <div className="contenedorInputs col-md-12">
             <div className="inputs col-md-12">
@@ -124,11 +124,11 @@ function cambiarColorTextoInferior(e) {
         <div className='image col-md-6'>
           {!selectedImage? null : 
           <>
-          <div className='m-10 p-10'>
+          <div className=' meme'>
             <figure className='container-img position-relative' id="exportar" > 
-              <p className='textoArriba'>{textomeme}</p>
+              <p className='textoArriba'><strong>{textomeme}</strong></p>
               <img src={selectedImage} alt='meme' className='figure-img m-auto' />
-              <p className='textoAbajo m-20'>{textomemeabajo}</p>
+              <p className='textoAbajo m-20'><strong>{textomemeabajo}</strong></p>
             </figure>
 
           </div>
@@ -151,7 +151,7 @@ function cambiarColorTextoInferior(e) {
             <img className='imgmeme' src={meme.url} alt={`Meme ${meme.name}`} />
           </div>
           <div className='card-info'>
-            <h5 className='card-title text-white'>{meme.name}</h5>
+            <h6 className='card-title text-white'>{meme.name}</h6>
           </div>
         </div>
       ))}

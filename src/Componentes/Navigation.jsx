@@ -21,14 +21,14 @@ function Navigation ({user}) {
     <>
 			<header className='header col'>
 				
-			<Navbar collapseOnSelect expand="md"  data-bs-theme="dark">
-				<Container fluid>
+			<Navbar    data-bs-theme="dark">
+				<Container fluid> 
 					<Navbar.Brand href="/" className='logo'>
 
 						<img
 							src="../Memecrazy.png"
-							width="100"
-							height="100"
+							width="80"
+							height="80"
 							className="d-inline-block align-top"
 							alt="Memecrazy Logo"
 						/>
