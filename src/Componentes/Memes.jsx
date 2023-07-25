@@ -84,46 +84,54 @@ function cambiarColorTextoInferior(e) {
   return (
    <>
    <div className='container'>
-    <h1 className='mt-1 mb-3 text-light text-center'>Edita tu propio meme</h1>
-
+    <h1 className=' mb-2 text-light text-center'>Edita tu propio meme</h1>
+    {!selectedImage? null : 
+          <>
     <div className='Container'>
       <div className='container-editor text-center row my-2'>
-        <div className='col-md-12  my-2'> <h2 className='mt-2 mb-2 text-center text-light'>Escribe tu frase</h2></div>
+        
         <div className='col-md-6 my-4'>
           
           <div className="contenedorInputs col-md-12">
+          <div className='col-md-12  my-2'> <h2 className='mt-2 mb-4 text-center text-light'>Escribe tu frase</h2></div>
+          <div className="inputs col-md-12 mt-2  ">
+                <h5 className='text-light'>FRASE SUPERIOR</h5>
             <div className="inputs col-md-12">
-              <input onChange={textmeme} type="text" className="inputText" placeholder="texto 1" />
+              <input onChange={textmeme} type="text" className="inputText" placeholder="Escribe tu frase superior" />
               <input onChange={cambiarColorTextoSuperior} type="color" />
             </div>
-            <div className="inputs col-md-12">
+            <div className="inputs col-md-12 mt-1 ">
+              
+            
               <p onChange={cambiaPosicionSuperior}>
-                          <input type="radio" name="posicion" value="start" />principio
-                          <input type="radio" name="posicion" value="center" defaultChecked />medio
-                          <input type="radio" name="posicion" value="end" />fin
+              <label className='text-light'><strong>Ubicación Frase superior: </strong></label><input type="radio" name="posicion" value="start" /><label className='text-light'>Inicio</label>
+                  <input type="radio" name="posicion" value="center" defaultChecked /><label className='text-light'>Medio</label>
+                  <input type="radio" name="posicion" value="end" /><label className='text-light'>Fin</label>
               </p>
 
             </div>
-                  
-            <div className="inputs col-md-12 mt-2  ">
-                <input onChange={textmemeabajo} type="text" className="inputText" placeholder="texto 2" />
-                <input onChange={cambiarColorTextoInferior} type="color" />
             </div>
-            <div className="inputs col-md-12 mt-2  ">
-
-                <p onChange={cambiaPosicionInferior}>
-                    <input type="radio" name="posicion2" value="start" />principio
-                    <input type="radio" name="posicion2" value="center" defaultChecked />medio
-                    <input type="radio" name="posicion2" value="end" />fin
-                </p>
-            </div>
+            <div className="inputs col-md-12 mt-5  ">
+                <h5 className='text-light'>FRASE INFERIOR</h5>
+              <div className="inputs col-md-12 mt-2  ">
+                  <input onChange={textmemeabajo} type="text" className="inputText" placeholder="Escribe tu frase inferior" />
+                  <input onChange={cambiarColorTextoInferior} type="color" />
+              </div>
+              <div className="inputs col-md-12 mt-1  ">
+              
+                  <p onChange={cambiaPosicionInferior}>
+                  <label className='text-light'><strong>Ubicación Frase inferior: </strong></label><input type="radio" name="posicion2" value="start" /><label className='text-light'>Inicio</label>
+                      <input type="radio" name="posicion2" value="center" defaultChecked /><label className='text-light'>Medio</label>
+                      <input type="radio" name="posicion2" value="end" /><label className='text-light'>Fin</label>
+                  </p>
+              </div>
+            </div>     
 
         </div>
         </div>
       
         <div className='image col-md-6'>
-          {!selectedImage? null : 
-          <>
+          
           <div className=' meme'>
             <figure className='container-img position-relative' id="exportar" > 
               <p className='textoArriba'><strong>{textomeme}</strong></p>
@@ -132,15 +140,17 @@ function cambiarColorTextoInferior(e) {
             </figure>
 
           </div>
-          </>}
+          
           
         </div> 
       </div>
     </div>
     <div className='text-center'>
-      <button onClick={descarga} type='button' className='btn btn-primary mt-5 mb-4'>Descargar meme</button>
+      <button onClick={descarga} type='button' className='btn btn-primary mb-4'>Descargar meme</button>
 
     </div>
+    </>}
+    
     
     <h2 className='mt-2 mb-3 text-light'>Elige la imagen para tu meme</h2>
     <div className='card-list-Meme container'>
